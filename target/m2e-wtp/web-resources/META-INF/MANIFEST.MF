@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: crawler-server
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: admin
+Implementation-Vendor-Id: com.plus
+Build-Jdk: 1.8.0_221
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/plus.crawler/crawler-server
+Created-By: Maven Integration for Eclipse
+
