@@ -38,7 +38,7 @@
 
         //判断当前浏览器是否支持WebSocket
         if ('WebSocket' in window) {
-            websocket = new WebSocket('ws://localhost:1202/websocket/' + roomid);
+            websocket = new WebSocket('ws://localhost:8080/websocket/' + roomid);
         }
         else {
             alert('当前浏览器 Not support websocket')
