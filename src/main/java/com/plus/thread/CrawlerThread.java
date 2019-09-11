@@ -25,8 +25,16 @@ public class CrawlerThread implements Runnable {
     public void run(){
         connectToDy();
         WebSocket webSocket = new WebSocket();
+        String s = "";
         while (true) {
-            String s = DyUtil.receiveMsg(client);
+        	try {
+        		s = DyUtil.receiveMsg(client);
+			} catch (Exception e) {
+				System.out.println("退出循环,让线程空出来,以便线程池回收。");
+				e.printStackTrace();
+				break;
+			}
+            
             if (s.equals(DyUtil.INVALID_MSG)) {
                 connectToDy();
                 continue;
