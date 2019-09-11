@@ -4,25 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Douyu弹幕服务器</title>
-    <link rel="stylesheet" href="layui.css" media="all">
+    <style>
+    	.btn {width: 200px;height: 30px;display: inline-block;vertical-align: middle;}
+    </style>
 </head>
 
 <body>
-    <fieldset class="layui-elem-field site-demo-button">
+    <fieldset>
         <legend>Welcome Douyu Server</legend>
-
-        <div class="layui-form-item">
-            <label class="layui-form-label">房间号</label>
-            <div class="layui-input-inline">
-                <input type="text" id="text" autocomplete="off" class="layui-input">
-            </div>
+        <div>
+            <label>房间号</label>
             <div>
-                <button type="button" class="layui-btn layui-btn-normal layui-btn-radius"
-                    onclick="join()">进入直播间</button>
-                <button type="button" class="layui-btn layui-btn-danger layui-btn-radius"
-                    onclick="closeWebSocket()">关闭Douyu弹幕服务器</button>
-                <button type="button" class="layui-btn layui-btn-normal layui-btn-radius"
-                    onclick="clearText()">清屏</button>
+                <input type="text" id="text" autocomplete="off">
+                <button type="button" class="btn" onclick="join()">进入直播间</button>
+                <button type="button" class="btn" onclick="closeWebSocket()">关闭Douyu弹幕服务器</button>
+                <button type="button" class="btn" onclick="clearText()">清屏</button>
             </div>
         </div>
     </fieldset>
