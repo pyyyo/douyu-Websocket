@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <title>DouyuTV</title>
     <style>
-    	.btn {width: 200px;height: 30px;display: inline-block;vertical-align: middle;}
+        .btn {
+            width: 200px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+        }
     </style>
 </head>
 
@@ -27,13 +32,20 @@
 
 <script type="text/javascript">
     var websocket = null;
-
+    var temp = null;	//临时变量
     function join() {
-
         var roomid = document.getElementById("text").value;
-        if (roomid == 'null' || roomid == '') {
+        if (!roomid) {	//房间号为空
             alert("清先填写房间号。");
             return;
+        }
+        if (!temp) {		//临时变量为空
+            temp = roomid;
+        } else {
+            if (temp == roomid) {		//临时变量的值跟房间号为空则return
+                alert("请勿重复提交。");
+                return;
+            }
         }
 
         //判断当前浏览器是否支持WebSocket
