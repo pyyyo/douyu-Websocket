@@ -65,7 +65,7 @@ public class CrawlerThread implements Runnable {
 								+ cardLevel + "级] " + "[" + name + "] : " + danMu).toString();
 					}
 					System.out.println(str);
-					webSocket.sendDanmu(String.valueOf(roomId), str);
+					webSocket.sendMessage(String.valueOf(roomId), str);
 				} catch (Exception e) {
 					e.printStackTrace();
 					System.out.println("format not correct");

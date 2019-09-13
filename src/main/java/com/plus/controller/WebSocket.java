@@ -66,10 +66,6 @@ public class WebSocket {
         session.getBasicRemote().sendText("***连接" + roomId + "房间中，请稍候***");
     }
     
-    public void sendDanmu(String roomId,String message) throws IOException {
-    	sendMessage(roomId, message);
-    }
- 
     @OnError
     public void onError(Session session,Throwable throwable){
         System.out.println("发生错误！");
